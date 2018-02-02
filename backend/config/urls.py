@@ -26,8 +26,12 @@ from rest_framework_simplejwt.views import (
 
 from rest_framework import views, serializers, status
 from rest_framework.response import Response
+
+
 class MessageSerializer(serializers.Serializer):
     message = serializers.CharField()
+
+
 class EchoView(views.APIView):
     def post(self, request, *args, **kwargs):
         serializer = MessageSerializer(data=request.data)
@@ -47,5 +51,6 @@ urlpatterns = [
     url(r'^api/auth/token/obtain/$', TokenObtainPairView.as_view()),
     url(r'^api/auth/token/refresh/$', TokenRefreshView.as_view()),
 
-    url(r'^api/echo/$', EchoView.as_view())
+    url(r'^api/echo/$', EchoView.as_view()),
+    url(r'^polls/$', include('polls.urls'))
 ]
