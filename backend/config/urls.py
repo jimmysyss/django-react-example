@@ -52,5 +52,5 @@ urlpatterns = [
     url(r'^api/auth/token/refresh/$', TokenRefreshView.as_view()),
 
     url(r'^api/echo/$', EchoView.as_view()),
-    url(r'^polls/$', include('polls.urls'))
+    url(r'^polls/', include('polls.urls'))
 ]

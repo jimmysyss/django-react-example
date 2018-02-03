@@ -8,3 +8,8 @@ npm install --save redux-api-middleware@2.0.0-beta.3
 npm install --save jwt-decode
 npm install --save reactstrap react-transition-group@1.1.2
 npm install --save bootstrap@4.0.0-beta
+
+
+
+Get Access Token
+http://127.0.0.1:8000/api/auth/token/obtain/
